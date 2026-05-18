@@ -1,0 +1,149 @@
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.chart-card {
+  padding: 24px;
+  animation: fadeInUp 0.6s ease-out backwards;
+  transition: all 0.3s ease;
+}
+
+.chart-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.chart-card:nth-child(1) { animation-delay: 0.1s; }
+.chart-card:nth-child(2) { animation-delay: 0.15s; }
+.chart-card:nth-child(3) { animation-delay: 0.2s; }
+.chart-card:nth-child(4) { animation-delay: 0.25s; }
+.chart-card:nth-child(5) { animation-delay: 0.3s; }
+.chart-card:nth-child(6) { animation-delay: 0.35s; }
+
+.chart-large {
+  grid-column: span 2;
+}
+
+@media (max-width: 1200px) {
+  .charts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .chart-large {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+  .chart-large {
+    grid-column: span 1;
+  }
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.chart-title {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.chart-subtitle {
+  color: var(--gray-400);
+  font-size: 12px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.chart-badge {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+}
+
+.gradient-green-blue {
+  background: var(--gradient-green-blue);
+}
+
+.gradient-blue-purple {
+  background: var(--gradient-blue-purple);
+}
+
+.chart-body {
+  width: 100%;
+}
+
+.no-data {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--gray-500);
+  font-size: 14px;
+}
+
+/* Tooltip personalizado */
+.custom-tooltip {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.tooltip-label {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 13px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tooltip-value {
+  font-size: 12px;
+  margin: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tooltip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.tooltip-value strong {
+  color: white;
+  margin-left: 4px;
+}
+
+/* Recharts overrides */
+.recharts-legend-item-text {
+  color: var(--gray-300) !important;
+  font-size: 12px !important;
+}
+
+.recharts-cartesian-axis-tick-value {
+  fill: var(--gray-400);
+}
+
+.recharts-text {
+  fill: var(--gray-400) !important;
+}

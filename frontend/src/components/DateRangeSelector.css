@@ -1,0 +1,129 @@
+.date-range-selector {
+  padding: 24px;
+  margin-bottom: 24px;
+  animation: fadeInUp 0.6s ease-out 0.1s backwards;
+}
+
+.selector-header {
+  margin-bottom: 16px;
+}
+
+.selector-info {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.selector-info h3 {
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.current-range {
+  color: var(--gray-400);
+  font-size: 13px;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.preset-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.preset-btn {
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--gray-300);
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.preset-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.preset-btn.active {
+  background: var(--gradient-primary);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 4px 16px var(--blue-glow);
+}
+
+.custom-btn {
+  border-style: dashed;
+}
+
+.custom-range {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  align-items: flex-end;
+  animation: fadeIn 0.3s ease-out;
+  flex-wrap: wrap;
+}
+
+.date-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.date-input-group label {
+  color: var(--gray-400);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.date-input-group input {
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: white;
+  font-size: 13px;
+  font-family: inherit;
+  color-scheme: dark;
+}
+
+.date-input-group input:focus {
+  outline: none;
+  border-color: var(--blue-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.btn-apply {
+  padding: 10px 24px;
+  background: var(--gradient-green-blue);
+  border: none;
+  color: white;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.btn-apply:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px var(--green-glow);
+}
